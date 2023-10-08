@@ -1,6 +1,6 @@
 {
   "name": "@le2xx/ngx-audio-player",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/le2xx/ngx-audio-player.git"
@@ -15,12 +15,8 @@
     "audio",
     "player",
     "angular",
-    "angular7",
-    "angular8",
-    "angular9",
-    "angular10",
-    "angular11",
-    "angular12",
+    "angular15",
+    "angular16",
     "audio player",
     "angular audio player",
     "audio player with playlist",
