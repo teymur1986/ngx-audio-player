@@ -248,6 +248,34 @@ export class HomeComponent {
         this.advancedPlayer.unMuted();
     }
 
+    isMuted(): boolean {
+      return this.advancedPlayer?.volume === 0;
+    }
+
+    get volume(): number {
+        return this.advancedPlayer?.volume;
+    }
+
+    setVolume(volume: number): void {
+        this.advancedPlayer.volume = volume;
+    }
+
+    isPlaying(): boolean {
+        return this.advancedPlayer?.isPlaying;
+    }
+
+    isStopped(): boolean {
+        return !this.advancedPlayer?.isPlaying;
+    }
+
+    isEnded(): boolean {
+      return this.advancedPlayer?.currentTime >= this.advancedPlayer?.duration && this.isStopped();
+    }
+
+    isPaused(): boolean {
+        return this.isStopped() && this.advancedPlayer?.currentTime > 0 && this.advancedPlayer?.currentTime < this.advancedPlayer?.duration;
+    }
+
   clearEvents() {
     this.events = [];
   }

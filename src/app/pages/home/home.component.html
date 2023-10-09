@@ -63,6 +63,24 @@
         </mat-checkbox>
         displayDuration: {{msaapDisplayDuration}}
       </div>
+        <div class="px-2 pt-1">
+            <div>isMuted: {{ isMuted() }}</div>
+        </div>
+        <div class="px-2 pt-1">
+            <div>isPlaying: {{ isPlaying() }}</div>
+        </div>
+        <div class="px-2 pt-1">
+            <div>isStopped: {{ isStopped() }}</div>
+        </div>
+        <div class="px-2 pt-1">
+            <div>isEnded: {{ isEnded() }}</div>
+        </div>
+        <div class="px-2 pt-1">
+            <div>isPaused: {{ isPaused() }}</div>
+        </div>
+        <div class="px-2 pt-1">
+            <div>volume: {{ volume }}</div>
+        </div>
     </div>
     <div class="col-lg-3 col-md-6 col-12 data-border-right data-border-top">
       <h6 class="text-center">Data</h6>
@@ -119,6 +137,9 @@
         </div>
         <div class="px-2 pt-1">
             <button (click)="unMuted()" mat-stroked-button>UnMuted</button>
+        </div>
+        <div class="px-2 pt-1">
+            <button (click)="setVolume(0.5)" mat-stroked-button>Set Volume 0.5</button>
         </div>
     </div>
   </div>
