@@ -245,6 +245,18 @@ export class AudioPlayerComponent implements OnInit, OnChanges {
         }
     }
 
+    muted() {
+        if (this.volume === 0) {
+            return;
+        }
+        this.toggledVolume = this.volume;
+        this.setVolume(0);
+    }
+
+    unMuted() {
+        this.setVolume(this.toggledVolume);
+    }
+
     toggleRepeat() {
         if (this.repeat === 'none') {
             this.repeat = 'all';

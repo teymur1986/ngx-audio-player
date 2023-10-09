@@ -236,6 +236,18 @@ export class HomeComponent {
     this.advancedPlayer.stop();
   }
 
+    toggleVolume() {
+        this.advancedPlayer.toggleVolume();
+    }
+
+    muted() {
+        this.advancedPlayer.muted();
+    }
+
+    unMuted() {
+        this.advancedPlayer.unMuted();
+    }
+
   clearEvents() {
     this.events = [];
   }
