@@ -260,6 +260,14 @@ export class HomeComponent {
         this.advancedPlayer.volume = volume;
     }
 
+    setForward(value: number) {
+        this.advancedPlayer.forward(value);
+    }
+
+    setRewind(value: number) {
+        this.advancedPlayer.rewind(value);
+    }
+
     isPlaying(): boolean {
         return this.advancedPlayer?.isPlaying;
     }

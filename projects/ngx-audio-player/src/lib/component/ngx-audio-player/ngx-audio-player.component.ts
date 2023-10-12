@@ -257,6 +257,14 @@ export class AudioPlayerComponent implements OnInit, OnChanges {
         this.setVolume(this.toggledVolume);
     }
 
+    forward(time_diff: number) {
+      this.currTimePosChanged({ value: this.currentTime + time_diff })
+    }
+
+    rewind(time_diff: number) {
+      this.currTimePosChanged({ value: this.currentTime - time_diff })
+    }
+
     toggleRepeat() {
         if (this.repeat === 'none') {
             this.repeat = 'all';
