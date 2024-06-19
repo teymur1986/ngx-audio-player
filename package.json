@@ -27,7 +27,7 @@
     "lch-build": "ng build",
     "prod-build": "ng build --configuration production",
     "build-lib": "ng build ngx-audio-player --configuration production",
-    "publish-lib": "npm publish --f dist/ngx-audio-player --access public",
+    "publish-lib": "cd dist/ngx-audio-player && npm publish --access public",
     "build-demo": "ng build --configuration production --base-href https://mudigal-technologies.github.io/ngx-audio-player/",
     "publish-demo": "npx ngh --dir=dist/ngx-audio-player-demo/",
     "test": "ng test --code-coverage --reporters=coverage-istanbul",
