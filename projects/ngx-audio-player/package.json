@@ -1,6 +1,6 @@
 {
   "name": "@le2xx/ngx-audio-player",
-  "version": "16.2.0",
+  "version": "17.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/le2xx/ngx-audio-player.git"
@@ -15,8 +15,7 @@
     "audio",
     "player",
     "angular",
-    "angular15",
-    "angular16",
+    "angular17",
     "audio player",
     "angular audio player",
     "audio player with playlist",
@@ -35,9 +34,9 @@
     "url": "https://github.com/le2xx/ngx-audio-player/issues"
   },
   "peerDependencies": {
-    "@angular/common": ">=15.0.0",
-    "@angular/core": ">=15.0.0",
-    "@angular/material": ">=15.0.0",
+    "@angular/common": ">=17.0.0",
+    "@angular/core": ">=17.0.0",
+    "@angular/material": ">=17.0.0",
     "rxjs": ">=7.0.0"
   },
   "dependencies": {
