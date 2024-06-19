@@ -124,7 +124,6 @@ export class HomeComponent {
 
   addEvent(event) {
     this.events.push(event);
-    console.log(event);
   }
 
   onNextTrackRequested(event) {
@@ -257,7 +256,7 @@ export class HomeComponent {
     }
 
     setVolume(volume: number): void {
-        this.advancedPlayer.volume = volume;
+        this.advancedPlayer.currVolumeChanged(volume);
     }
 
     setForward(value: number) {

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import {Component, ElementRef, NgModule, ViewChild} from '@angular/core';
+import { Component, ElementRef, NgModule, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -15,12 +15,6 @@ export class FooterComponent {
   constructor(
     private http: HttpClient,
   ) { }
-
-  ngOnInit(): void {
-    this.http.get(this.src, { responseType: 'text' }).subscribe(svg => {
-      this.mlogo.nativeElement.innerHTML = svg;
-    });
-  }
 }
 
 

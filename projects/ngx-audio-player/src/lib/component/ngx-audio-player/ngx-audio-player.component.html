@@ -125,13 +125,25 @@
                 </span>
             </div>
 
-            <mat-slider *ngIf="mediaType !== 'stream'" [disabled]="disablePositionSlider"
-                (change)="currTimePosChanged($event)" [min]="startOffset"
-                class="ngx-d-none ngx-d-sm-block ngx-flex-fill ngx-p-1 ngx-slider" max="{{duration-endOffset}}"
-                style="width: 100%" value="{{currentTime}}"></mat-slider>
-            <mat-slider *ngIf="mediaType === 'stream'" [disabled]="true" [min]="startOffset"
-                class="ngx-d-none ngx-d-sm-block ngx-flex-fill ngx-p-1" max="{{currentTime}}" style="width: 100%"
-                value="{{currentTime}}"></mat-slider>
+            <mat-slider
+                    *ngIf="mediaType !== 'stream'"
+                    [disabled]="disablePositionSlider"
+                    [min]="startOffset"
+                    [max]="duration-endOffset"
+                    style="width: 100%"
+            >
+                <input matSliderThumb [value]="currentTime" (valueChange)="currTimePosChanged($event)">
+            </mat-slider>
+
+            <mat-slider
+                    *ngIf="mediaType === 'stream'"
+                    [disabled]="true"
+                    [min]="startOffset"
+                    [max]="currentTime"
+                    style="width: 100%"
+            >
+                <input matSliderThumb [value]="currentTime">
+            </mat-slider>
 
             <div class="ngx-py-3 ngx-px-1" style="font-size: 12px; text-align: right">
                 <span *ngIf="mediaType !== null && mediaType !== 'stream' && duration !== 0.01">
@@ -197,9 +209,14 @@
                 <path d="M0 0h24v24H0z" fill="none" />
             </svg>
         </mat-icon>
-        <mat-slider *ngIf="displayVolumeSlider" (change)="currVolumeChanged($event)" [min]="0"
-            class="ngx-d-none ngx-d-sm-block ngx-p-1 ngx-volume ngx-slider" max="1" step="0.01"
-            value="{{volume}}"></mat-slider>
+        <mat-slider
+                *ngIf="displayVolumeSlider"
+                [min]="0"
+                max="1"
+                step="0.01"
+        >
+            <input matSliderThumb [value]="volume" (valueChange)="currVolumeChanged($event)">
+        </mat-slider>
     </button>
 </mat-card>
 

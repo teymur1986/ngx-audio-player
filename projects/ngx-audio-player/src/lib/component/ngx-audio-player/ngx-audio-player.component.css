@@ -30,6 +30,10 @@ table {
     min-width: 375px;
 }
 
+.mdc-card {
+    flex-direction: row;
+}
+
 .mat-expansion-panel {
     min-width: 375px;
 }
